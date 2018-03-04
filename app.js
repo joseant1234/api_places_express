@@ -54,7 +54,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(findAppBySecret)
 app.use(findAppByApplicationId);
 // por la peticion preflight en CORs se pone unless method OPTIONS. No autentica con la petición en OPTIONS (preflight)
-app.use(authApp.unless({method: 'OPTIONS'}));
+// app.use(authApp.unless({method: 'OPTIONS'}));
 // permite las peticiones excepto en las carpeta public
 app.use(allowCORs.unless({path: '/public'}));
 

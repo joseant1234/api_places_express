@@ -11,7 +11,7 @@ function create(req,res,next){
 			req.user = user;
 			// res.json(user);
 			next();
-		}).catch(err=>{
+		}).catch(error=>{
 			console.log(error);
 			// shortcut error: error
 			res.status(422).json({error})
